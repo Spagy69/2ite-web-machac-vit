@@ -11,7 +11,7 @@ Interaktivní webová vizitka věnovaná historii a vývoji Linuxu - od jeho vzn
 - **Populární distribuce** - Ubuntu, Debian, Fedora, Arch, Mint, Pop!_OS
 - **3D Tux interaktivní model** - maskot Linuxu v Three.js
 
-**Živá ukázka:** [https://spagy69.github.io/2ite-web-vit-machac/](https://spagy69.github.io/2ite-web-vit-machac/)
+**Živá ukázka:** [https://spagy69.github.io/2ite-web-vit-machac/](https://spagy69.github.io/2ite-web-machac-vit/)
 
 ## Použité technologie
 
