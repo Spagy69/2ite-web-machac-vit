@@ -11,6 +11,8 @@ Interaktivní webová vizitka věnovaná historii a vývoji Linuxu - od jeho vzn
 - **Populární distribuce** - Ubuntu, Debian, Fedora, Arch, Mint, Pop!_OS
 - **3D Tux interaktivní model** - maskot Linuxu v Three.js
 
+**Živá ukázka:** [https://spagy69.github.io/2ite-web-vit-machac/](https://spagy69.github.io/2ite-web-vit-machac/)
+
 ## Použité technologie
 
 ### Core
@@ -29,7 +31,7 @@ Projekt nevyžaduje žádný build proces. Stačí:
 
 1. Naklonovat repozitář:
    ```bash
-   git clone https://github.com/[username]/2ite-web-vit-machac.git
+   git clone https://github.com/Spagy69/2ite-web-vit-machac.git
    ```
 
 2. Otevřít `index.html` v prohlížeči
@@ -43,7 +45,7 @@ python -m http.server 8000
 npx serve
 ```
 
-## Prvky, na které jsem hrdý
+## Prvky
 
 ### Design & UX
 - **Premium dark theme** s gradientovou color paletou (orange + blue)
@@ -81,13 +83,13 @@ npx serve
 ├── index.html              # Hlavní HTML soubor
 ├── assets/
 │   ├── images/             # SVG ikony a loga
-│   │   ├── linux-svgrepo-com.svg
-│   │   ├── ubuntu-svgrepo-com.svg
-│   │   ├── debian-svgrepo-com.svg
-│   │   ├── fedora-svgrepo-com.svg
-│   │   ├── arch-linux-svgrepo-com.svg
-│   │   ├── linux-mint-svgrepo-com.svg
-│   │   └── Pop!_OS_Icon.svg
+│   │   ├── linux-tux.svg
+│   │   ├── ubuntu.svg
+│   │   ├── debian.svg
+│   │   ├── fedora.svg
+│   │   ├── arch.svg
+│   │   ├── mint.svg
+│   │   └── pop!_os.svg
 │   └── models/
 │       └── tux.glb         # 3D model Tuxe
 ├── css/
@@ -101,7 +103,7 @@ npx serve
 
 ## Autor
 
-**Vít Macháč** - 2.ITE
+**Vít Machač** - 2.ITE
 
 ---
 
