@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Objevte fascinující historii operačního systému Linux - od jeho vzniku v roce 1991 po současnost. Interaktivní vizitka s 3D modelem Tuxe.">
+    <meta name="keywords"
+        content="Linux, Linus Torvalds, Tux, open source, Ubuntu, Debian, Fedora, Arch Linux, operační systém">
+    <meta name="author" content="Vít Macháč">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Linux - Operační systém svobody">
+    <meta property="og:description" content="Interaktivní one-page web o historii a vývoji Linuxu s 3D modelem Tuxe.">
+    <meta property="og:type" content="website">
+
+    <title>Linux - Operační systém svobody | Historie & Distribuce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/linux-svgrepo-com.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img class="logo-icon" src="assets/images/linux-svgrepo-com.svg" alt="Tux" width="28" height="28">
+                <span class="logo-text">Linux</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">O Linuxu</a></li>
+                <li><a href="#history" class="nav-link">Historie</a></li>
+                <li><a href="#creator" class="nav-link">Tvůrce</a></li>
+                <li><a href="#distros" class="nav-link">Distribuce</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="particles" id="particles"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">Vítejte ve světě</p>
+                <h1 class="hero-title">
+                    <span class="title-line">Linux</span>
+                    <span class="title-accent">Operační systém svobody</span>
+                </h1>
+                <p class="hero-description" id="typewriter"></p>
+                <a href="#about" class="hero-cta">
+                    <span>Objevit více</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-3d">
+                <canvas id="tux-canvas"></canvas>
+                <div class="glow-ring"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scrollujte dolů</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Úvod</span>
+                <h2 class="section-title">Co je Linux?</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">
+                        Linux je svobodný a open-source operační systém založený na jádře, které v roce 1991
+                        vytvořil <strong>Linus Torvalds</strong>. Dnes pohání vše od smartphonů po superpočítače.
+                    </p>
+                    <p>
+                        Na rozdíl od proprietárních systémů jako Windows nebo macOS je Linux zcela transparentní –
+                        kdokoli může studovat, upravovat a sdílet jeho zdrojový kód. Tato filozofie přinesla
+                        revoluci ve světě softwaru.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="96.4">0</div>
+                        <div class="stat-label">% webových serverů</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">% superpočítačů</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">+ miliardy Android zařízení</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="33">0</div>
+                        <div class="stat-label">let vývoje</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section class="history" id="history">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Cesta časem</span>
+                <h2 class="section-title">Historie Linuxu</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item" data-year="1991">
+                    <div class="timeline-dot">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge">1991</span>
+                            <span class="timeline-date">25. srpna</span>
+                        </div>
+                        <h3>Zrození Linuxu</h3>
+                        <p>Linus Torvalds oznamuje svůj "hobby" projekt v Usenet skupině comp.os.minix.
+                            Píše: "Dělám (svobodný) operační systém, jen hobby, nebude velký a profesionální jako GNU."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="1991">
+                    <div class="timeline-dot">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge">1991</span>
+                            <span class="timeline-date">17. září</span>
+                        </div>
+                        <h3>První verze 0.01</h3>
+                        <p>Vydána první verze Linuxového jádra. Obsahuje pouhých <strong>10 239 řádků</strong> kódu
+                            a běží pouze na procesorech Intel 386.</p>
+                        <div class="timeline-stat">
+                            <span class="stat-value">10 239</span>
+                            <span class="stat-label">řádků kódu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="1992">
+                    <div class="timeline-dot">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge">1992</span>
+                        </div>
+                        <h3>GPL licence</h3>
+                        <p>Linux přechází pod licenci <strong>GNU GPL</strong>. Toto rozhodnutí Torvalds považuje za
+                            nejlepší, jaké kdy udělal – otevřelo cestu k masové spolupráci.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="1993">
+                    <div class="timeline-dot">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge">1993</span>
+                        </div>
+                        <h3>První distribuce</h3>
+                        <p>Vznikají <strong>Slackware</strong> a <strong>Debian</strong> – první ucelené distribuce,
+                            které kombinují
+                            Linux jádro s uživatelským prostředím a balíčkovými systémy.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="1994">
+                    <div class="timeline-dot">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge milestone">1994</span>
+                            <span class="timeline-date">březen</span>
+                        </div>
+                        <h3>Linux 1.0</h3>
+                        <p>Po třech letech vývoje vychází první <strong>stabilní verze</strong> jádra.
+                            Linux je připraven pro produkční nasazení.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="1996">
+                    <div class="timeline-dot">
+                        <img src="assets/images/linux-svgrepo-com.svg" alt="Tux" width="20" height="20">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge">1996</span>
+                        </div>
+                        <h3>Tux se stává maskotem</h3>
+                        <p>Larry Ewing vytváří ikonického tučňáka <strong>Tuxe</strong> pomocí GIMPu.
+                            Linus prý vybral tučňáka, protože ho jednou v zoo jeden kousl.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2004">
+                    <div class="timeline-dot">
+                        <img src="assets/images/ubuntu-svgrepo-com.svg" alt="Ubuntu" width="20" height="20">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge">2004</span>
+                            <span class="timeline-date">říjen</span>
+                        </div>
+                        <h3>Ubuntu revolucionizuje desktop</h3>
+                        <p>Mark Shuttleworth vydává Ubuntu 4.10 "Warty Warthog". Cílem je přinést
+                            Linux běžným uživatelům – <em>"Linux pro lidské bytosti"</em>.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2011">
+                    <div class="timeline-dot">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge milestone">2011</span>
+                        </div>
+                        <h3>20 let a jádro 3.0</h3>
+                        <p>Linux slaví <strong>20. narozeniny</strong> vydáním jádra 3.0. Systém nyní běží na
+                            miliardách zařízení po celém světě.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2026">
+                    <div class="timeline-dot">
+                        <img src="assets/images/linux-svgrepo-com.svg" alt="Linux" width="20" height="20">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-year-badge milestone">2026</span>
+                        </div>
+                        <h3>Linux dnes</h3>
+                        <p>Linux pohání <strong>96,4 %</strong> z top miliónu webových serverů, <strong>100 %</strong>
+                            superpočítačů
+                            a přes <strong>3 miliardy</strong> Android zařízení.</p>
+                        <div class="timeline-stats">
+                            <div class="timeline-stat">
+                                <span class="stat-value">96.4%</span>
+                                <span class="stat-label">serverů</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">superpočítačů</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="stat-value">30M+</span>
+                                <span class="stat-label">řádků kódu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Section -->
+    <section class="creator" id="creator">
+        <div class="container">
+            <div class="creator-grid">
+                <div class="creator-image">
+                    <div class="image-frame">
+                        <div class="creator-photo">
+                            <img src="assets/images/linus.png" alt="Linus Torvalds" loading="lazy">
+                        </div>
+                        <div class="frame-glow"></div>
+                    </div>
+                </div>
+                <div class="creator-info">
+                    <span class="section-tag">Tvůrce</span>
+                    <h2 class="creator-name">Linus Torvalds</h2>
+                    <p class="creator-title">Finský softwarový inženýr a otec Linuxu</p>
+                    <blockquote class="creator-quote">
+                        "Dělám (svobodný) operační systém (jen hobby, nebude velký a profesionální
+                        jako GNU) pro 386(486) AT klony."
+                        <cite>— Původní oznámení, 25. srpna 1991</cite>
+                    </blockquote>
+                    <div class="creator-facts">
+                        <div class="fact">
+                            <svg class="fact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span>Narozen 28. prosince 1969, Helsinky</span>
+                        </div>
+                        <div class="fact">
+                            <svg class="fact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                            <span>Studoval na Helsinské univerzitě</span>
+                        </div>
+                        <div class="fact">
+                            <svg class="fact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M12 1v4M12 19v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M1 12h4M19 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                            </svg>
+                            <span>Vytvořil také Git (2005)</span>
+                        </div>
+                        <div class="fact">
+                            <svg class="fact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                            <span>Millennium Technology Prize (2012)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distributions Section -->
+    <section class="distros" id="distros">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ekosystém</span>
+                <h2 class="section-title">Populární distribuce</h2>
+                <p class="section-desc">Každá distribuce přináší unikátní přístup k Linuxu</p>
+            </div>
+            <div class="distros-grid">
+
+                <article class="distro-card" data-distro="ubuntu">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="distro-logo">
+                            <img src="assets/images/ubuntu-svgrepo-com.svg" alt="Ubuntu logo">
+                        </div>
+                        <h3 class="distro-name">Ubuntu</h3>
+                        <p class="distro-desc">Nejpopulárnější distribuce pro začátečníky. Obrovská komunita,
+                            snadná instalace a pravidelné aktualizace každých 6 měsíců.</p>
+                        <div class="distro-tags">
+                            <span class="tag">Začátečníci</span>
+                            <span class="tag">Desktop</span>
+                            <span class="tag">Server</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="distro-card" data-distro="debian">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="distro-logo">
+                            <img src="assets/images/debian-svgrepo-com.svg" alt="Debian logo">
+                        </div>
+                        <h3 class="distro-name">Debian</h3>
+                        <p class="distro-desc">Základ pro Ubuntu a mnoho dalších. Legendární stabilita,
+                            čistá filozofie svobodného softwaru a obří repozitář balíčků.</p>
+                        <div class="distro-tags">
+                            <span class="tag">Stabilita</span>
+                            <span class="tag">Server</span>
+                            <span class="tag">Free Software</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="distro-card" data-distro="fedora">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="distro-logo">
+                            <img src="assets/images/fedora-svgrepo-com.svg" alt="Fedora logo">
+                        </div>
+                        <h3 class="distro-name">Fedora</h3>
+                        <p class="distro-desc">Cutting-edge technologie od Red Hatu. Ideální pro vývojáře,
+                            kteří chtějí nejnovější software a inovace.</p>
+                        <div class="distro-tags">
+                            <span class="tag">Vývojáři</span>
+                            <span class="tag">Inovace</span>
+                            <span class="tag">Red Hat</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="distro-card" data-distro="arch">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="distro-logo">
+                            <img src="assets/images/arch-linux-svgrepo-com.svg" alt="Arch Linux logo">
+                        </div>
+                        <h3 class="distro-name">Arch Linux</h3>
+                        <p class="distro-desc">Plná kontrola a maximální přizpůsobení. Rolling release model,
+                            legendární Arch Wiki a filozofie KISS (Keep It Simple, Stupid).</p>
+                        <div class="distro-tags">
+                            <span class="tag">Pokročilí</span>
+                            <span class="tag">DIY</span>
+                            <span class="tag">Rolling</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="distro-card" data-distro="mint">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="distro-logo">
+                            <img src="assets/images/linux-mint-svgrepo-com.svg" alt="Linux Mint logo">
+                        </div>
+                        <h3 class="distro-name">Linux Mint</h3>
+                        <p class="distro-desc">Perfektní přechod z Windows. Elegantní Cinnamon desktop,
+                            vše funguje "out of the box" včetně multimédií.</p>
+                        <div class="distro-tags">
+                            <span class="tag">Ex-Windows</span>
+                            <span class="tag">Elegance</span>
+                            <span class="tag">Multimedia</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="distro-card" data-distro="pop">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="distro-logo">
+                            <img src="assets/images/Pop!_OS_Icon.svg" alt="Pop!_OS logo">
+                        </div>
+                        <h3 class="distro-name">Pop!_OS</h3>
+                        <p class="distro-desc">Od System76, optimalizovaný pro gaming a vývoj.
+                            Automatická správa GPU, tiling window manager a moderní design.</p>
+                        <div class="distro-tags">
+                            <span class="tag">Gaming</span>
+                            <span class="tag">Vývoj</span>
+                            <span class="tag">GPU</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="footer-logo" src="assets/images/linux-svgrepo-com.svg" alt="Tux" width="32" height="32">
+                    <p>Linux – Open source od roku 1991</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://kernel.org" target="_blank" rel="noopener">kernel.org</a>
+                    <a href="https://github.com/torvalds/linux" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linuxfoundation.org" target="_blank" rel="noopener">Linux Foundation</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vít Macháč | Školní projekt 2.ITE</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/tux3d.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
