@@ -1094,6 +1094,21 @@ section {
 
     .hero-text {
         order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        width: 100%;
+    }
+
+    .hero-description {
+        margin: 0 auto 2rem auto;
+    }
+
+    .hero-cta {
+        margin: 0 auto;
     }
 
     .hero-3d {
