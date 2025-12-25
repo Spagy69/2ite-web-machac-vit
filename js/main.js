@@ -111,6 +111,10 @@ function initNavigation() {
 // Scroll Animations
 // ===================================
 function initScrollAnimations() {
+    const isMobile = window.innerWidth < 768;
+    const triggerStart = isMobile ? 'top 110%' : 'top 80%';
+    const timelineStart = isMobile ? 'top 110%' : 'top 85%';
+
     // About section text
     gsap.to('.about-text', {
         opacity: 1,
@@ -118,7 +122,7 @@ function initScrollAnimations() {
         duration: 1,
         scrollTrigger: {
             trigger: '.about-text',
-            start: 'top 80%',
+            start: triggerStart,
             toggleActions: 'play none none reverse'
         }
     });
@@ -131,7 +135,7 @@ function initScrollAnimations() {
         stagger: 0.15,
         scrollTrigger: {
             trigger: '.about-stats',
-            start: 'top 80%',
+            start: triggerStart,
             toggleActions: 'play none none reverse'
         }
     });
@@ -144,7 +148,7 @@ function initScrollAnimations() {
             duration: 0.8,
             scrollTrigger: {
                 trigger: item,
-                start: 'top 85%',
+                start: timelineStart,
                 toggleActions: 'play none none reverse'
             }
         });
@@ -157,7 +161,7 @@ function initScrollAnimations() {
         duration: 1,
         scrollTrigger: {
             trigger: '.creator-info',
-            start: 'top 75%',
+            start: isMobile ? 'top 90%' : 'top 75%',
             toggleActions: 'play none none reverse'
         }
     });
@@ -170,7 +174,7 @@ function initScrollAnimations() {
         stagger: 0.1,
         scrollTrigger: {
             trigger: '.distros-grid',
-            start: 'top 80%',
+            start: triggerStart,
             toggleActions: 'play none none reverse'
         }
     });
@@ -386,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDistroCards();
     initTimelineAnimation();
 
-    console.log('🐧 Linux One-Page loaded!');
+    console.log('Linux One-Page načtena. (Co tu vlastně děláš kulišáku :D) Goodluck -> d2ViLnNwYWdldGFrLmNvbQ==');
 });
 
 // Handle page visibility

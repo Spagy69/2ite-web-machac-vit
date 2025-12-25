@@ -1,110 +1,43 @@
-# Linux One-Page Vizitka
+# Linux
 
-Moderní, vizuálně úchvatná jednostránková prezentace operačního systému Linux s interaktivním 3D modelem maskota Tuxe.
+One-page web o historii a současnosti Linuxu.
 
-## O projektu
+## Co tady najdeš
+- **Timeline** - od roku 1991 po dnešek
+- **Linus Torvalds** - info o tvůrci
+- **Distribuce** - přehled těch hlavních (Ubuntu, Arch, Fedora...)
+- **3D Tux** - interaktivní model v Three.js
 
-Interaktivní webová vizitka věnovaná historii a vývoji Linuxu - od jeho vzniku v roce 1991 až po současnost. Stránka představuje:
+### Živá ukázka
+[https://spagy69.github.io/2ite-web-machac-vit/](https://spagy69.github.io/2ite-web-machac-vit/)
 
-- **Historii Linuxu** - timeline s klíčovými milníky
-- **Linus Torvalds** - tvůrce Linuxu a jeho příběh
-- **Populární distribuce** - Ubuntu, Debian, Fedora, Arch, Mint, Pop!_OS
-- **3D Tux interaktivní model** - maskot Linuxu v Three.js
+## Jak to spustit
+Stačí otevřít `index.html`. Nic víc.
 
-**Živá ukázka:** [https://spagy69.github.io/2ite-web-vit-machac/](https://spagy69.github.io/2ite-web-vit-machac/)
-
-## Použité technologie
-
-### Core
-- **HTML5** - sémantická struktura
-- **CSS3** - custom properties, glassmorphism, animace
-- **JavaScript (ES6+)** - modulární architektura
-
-### Knihovny (CDN)
-- **[Three.js](https://threejs.org/)** - 3D grafika, GLTFLoader, OrbitControls
-- **[GSAP](https://greensock.com/gsap/)** - pokročilé animace, ScrollTrigger
-- **[Google Fonts](https://fonts.google.com/)** - Outfit, Inter
-
-## Spuštění
-
-Projekt nevyžaduje žádný build proces. Stačí:
-
-1. Naklonovat repozitář:
-   ```bash
-   git clone https://github.com/Spagy69/2ite-web-vit-machac.git
-   ```
-
-2. Otevřít `index.html` v prohlížeči
-
-Alternativně použít lokální server:
+Nebo přes server:
 ```bash
-# Python
-python -m http.server 8000
-
-# Node.js
 npx serve
+# nebo
+python -m http.server
 ```
 
-## Prvky
+## Tech stack
+- HTML5 & CSS3
+- JavaScript (ES6+)
+- Three.js (3D model)
+- GSAP (animace)
 
-### Design & UX
-- **Premium dark theme** s gradientovou color paletou (orange + blue)
-- **Glassmorphism efekty** s backdrop blur na kartách
-- **Responzivní design** od mobilů po 4K monitory
-
-### 3D Interakce
-- **Tux 3D model** s OrbitControls - uživatel může rotovat a interagovat
-- **Idle animace** - jemné plovoucí pohyby
-- **Dynamické osvětlení** - teplé a studené světlo pro depth
-
-### Animace
-- **Particle background** - plovoucí částice v hero sekci
-- **Typewriter efekt** - postupné vypisování textu
-- **Scroll-triggered animace** - elementy se objevují při scrollování
-- **Timeline reveal** - postupné odhalování historie
-- **Counter animace** - počítání statistik od nuly
-- **3D card tilt** - karty distribucí reagují na pohyb myši
-
-### Responzivita
-- Mobile-first přístup
-- Plynulé přechody mezi breakpointy
-- Optimalizace pro 4K displeje
-
-### SEO & Přístupnost
-- Kompletní meta tagy (Open Graph)
-- Sémantická HTML5 struktura
-- Správná hierarchie nadpisů
-- Přístupné navigační elementy
-
-## Struktura projektu
-
-```
-2ite-web-vit-machac/
-├── index.html              # Hlavní HTML soubor
-├── assets/
-│   ├── images/             # SVG ikony a loga
-│   │   ├── linux-tux.svg
-│   │   ├── ubuntu.svg
-│   │   ├── debian.svg
-│   │   ├── fedora.svg
-│   │   ├── arch.svg
-│   │   ├── mint.svg
-│   │   └── pop!_os.svg
-│   └── models/
-│       └── tux.glb         # 3D model Tuxe
-├── css/
-│   └── styles.css          # Všechny styly
-├── js/
-│   ├── main.js             # Animace a interakce
-│   └── tux3d.js            # Three.js 3D scéna
-├── LICENSE
-└── README.md
-```
+## Zdroje
+- **3D Tux**: [Sketchfab](https://sketchfab.com/3d-models/tux-157de95fa4014050a969a8361a83d366)
+- **Linux Tux (obrázek)**: [Wikipedia](https://cs.wikipedia.org/wiki/Linux#/media/Soubor:Tux.svg)
+- **Linus Torvalds**: [Britannica](https://www.britannica.com/biography/Linus-Torvalds)
+- **Arch Linux**: [VectorLogo](https://www.vectorlogo.zone/logos/archlinux/)
+- **Debian**: [SVG Repo](https://www.svgrepo.com/vectors/debian/)
+- **Fedora**: [SVG Repo](https://www.svgrepo.com/svg/354990/fedora)
+- **Mint**: [SVG Repo](https://www.svgrepo.com/svg/452055/linux-mint)
+- **Ubuntu**: [SVG Repo](https://www.svgrepo.com/svg/452122/ubuntu)
+- **Pop!_OS**: [Wikimedia](https://commons.wikimedia.org/wiki/File:Pop!_OS_Icon.svg)
 
 ## Autor
-
-**Vít Machač** - 2.ITE
-
----
-
-*Školní projekt 2026*
+Vít Machač, 2.ITE
+Školní projekt 2026 | VOŠ, SPŠ a SOŠ Varnsdorf
