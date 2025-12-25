@@ -28,15 +28,15 @@ python -m http.server
 - GSAP (animace)
 
 ## Zdroje
-- **3D Tux**: [Sketchfab](https://sketchfab.com/3d-models/tux-157de95fa4014050a969a8361a83d366)
-- **Linux Tux (obrázek)**: [Wikipedia](https://cs.wikipedia.org/wiki/Linux#/media/Soubor:Tux.svg)
-- **Linus Torvalds**: [Britannica](https://www.britannica.com/biography/Linus-Torvalds)
-- **Arch Linux**: [VectorLogo](https://www.vectorlogo.zone/logos/archlinux/)
-- **Debian**: [SVG Repo](https://www.svgrepo.com/vectors/debian/)
-- **Fedora**: [SVG Repo](https://www.svgrepo.com/svg/354990/fedora)
-- **Mint**: [SVG Repo](https://www.svgrepo.com/svg/452055/linux-mint)
-- **Ubuntu**: [SVG Repo](https://www.svgrepo.com/svg/452122/ubuntu)
-- **Pop!_OS**: [Wikimedia](https://commons.wikimedia.org/wiki/File:Pop!_OS_Icon.svg)
+- **3D Tux (glb)**: [Sketchfab](https://sketchfab.com/3d-models/tux-157de95fa4014050a969a8361a83d366)
+- **Linux Tux (svg)**: [Wikipedia](https://cs.wikipedia.org/wiki/Linux#/media/Soubor:Tux.svg)
+- **Linus Torvalds (png)**: [Britannica](https://www.britannica.com/biography/Linus-Torvalds)
+- **Arch Linux (svg)**: [VectorLogo](https://www.vectorlogo.zone/logos/archlinux/)
+- **Debian (svg)**: [SVG Repo](https://www.svgrepo.com/vectors/debian/)
+- **Fedora (svg)**: [SVG Repo](https://www.svgrepo.com/svg/354990/fedora)
+- **Mint (svg)**: [SVG Repo](https://www.svgrepo.com/svg/452055/linux-mint)
+- **Ubuntu (svg)**: [SVG Repo](https://www.svgrepo.com/svg/452122/ubuntu)
+- **Pop!_OS (svg)**: [Wikimedia](https://commons.wikimedia.org/wiki/File:Pop!_OS_Icon.svg)
 
 ## Autor
 - Vít Machač, 2.ITE
