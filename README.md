@@ -39,5 +39,5 @@ python -m http.server
 - **Pop!_OS**: [Wikimedia](https://commons.wikimedia.org/wiki/File:Pop!_OS_Icon.svg)
 
 ## Autor
-Vít Machač, 2.ITE
-Školní projekt 2026 | VOŠ, SPŠ a SOŠ Varnsdorf
+- Vít Machač, 2.ITE
+- Školní projekt 2026 | VOŠ, SPŠ a SOŠ Varnsdorf
