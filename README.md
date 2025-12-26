@@ -32,7 +32,7 @@ python -m http.server
 - **Linux Tux (svg)**: [Wikipedia](https://cs.wikipedia.org/wiki/Linux#/media/Soubor:Tux.svg)
 - **Linus Torvalds (png)**: [Britannica](https://www.britannica.com/biography/Linus-Torvalds)
 - **Arch Linux (svg)**: [VectorLogo](https://www.vectorlogo.zone/logos/archlinux/)
-- **Debian (svg)**: [SVG Repo](https://www.svgrepo.com/vectors/debian/)
+- **Debian (svg)**: [SVG Repo](https://www.svgrepo.com/svg/354912/debian)
 - **Fedora (svg)**: [SVG Repo](https://www.svgrepo.com/svg/354990/fedora)
 - **Mint (svg)**: [SVG Repo](https://www.svgrepo.com/svg/452055/linux-mint)
 - **Ubuntu (svg)**: [SVG Repo](https://www.svgrepo.com/svg/452122/ubuntu)
